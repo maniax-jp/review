@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarFun Air Pro 4 × Sennheiser BTD 700 レビュー：ゲーミング用途に革命をもたらす低遅延組み合わせ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 0;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(45deg, #f0f2f5, #e1e5e9);
+            border: 2px dashed #bbb;
+            color: #666;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin: 2rem;
+            border-radius: 15px;
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::before {
+            content: '📷';
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: #2a5298;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            color: #495057;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5cd 0%, #ffeb3b 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 5px solid #f44336;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.2);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196f3;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .spec-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .spec-card h4 {
+            color: #2a5298;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+
+        .spec-list li::before {
+            content: '▶';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .performance-table th {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .performance-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .performance-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .performance-table .best {
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .performance-table .good {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%);
+            font-weight: bold;
+            color: #f57c00;
+        }
+
+        .evaluation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .evaluation-card {
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .evaluation-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .evaluation-card.recommend {
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            border: 2px solid #4caf50;
+        }
+
+        .evaluation-card.caution {
+            background: linear-gradient(135deg, #ffecb3 0%, #fff176 100%);
+            border: 2px solid #ff9800;
+        }
+
+        .evaluation-card h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pros, .cons {
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .pros {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border-left: 5px solid #4caf50;
+        }
+
+        .cons {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%);
+            border-left: 5px solid #ff9800;
+        }
+
+        .pros h4, .cons h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .pros h4 {
+            color: #2e7d32;
+        }
+
+        .cons h4 {
+            color: #f57c00;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #263238 0%, #37474f 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .performance-table {
+                font-size: 0.9rem;
+            }
+
+            .performance-table th,
+            .performance-table td {
+                padding: 0.7rem;
+            }
+        }
+
+        .rating-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 0.5rem;
+            color: white;
+        }
+
+        .rating-excellent {
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+        }
+
+        .rating-good {
+            background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+        }
+
+        .rating-fair {
+            background: linear-gradient(135deg, #ffc107 0%, #ffcc02 100%);
+            color: #333;
+        }
+
+        .rating-poor {
+            background: linear-gradient(135deg, #f44336 0%, #ef5350 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>EarFun Air Pro 4 × Sennheiser BTD 700 レビュー</h1>
+            <div class="subtitle">ゲーミング用途に革命をもたらす低遅延組み合わせ</div>
+        </header>
+
+        <div class="content">
+            <div class="image-placeholder">
+                製品画像: EarFun Air Pro 4とSennheiser BTD 700を並べた写真
+            </div>
+
+            <section class="section">
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
+                    ワイヤレスイヤホンでのゲーミング用途において、遅延は最大の課題の一つです。今回は、EarFun Air Pro 4とSennheiser BTD 700の組み合わせを徹底検証し、ゲーミングヘッドセットに匹敵する低遅延性能が実現できるかを検証しました。
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>🎧 製品概要</h2>
+                
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>EarFun Air Pro 4</h4>
+                        <ul class="spec-list">
+                            <li><strong>ドライバー:</strong> 10mm径ダイナミック</li>
+                            <li><strong>Bluetooth:</strong> 5.4対応</li>
+                            <li><strong>対応コーデック:</strong> aptX Lossless / aptX Adaptive / LDAC / SBC / AAC</li>
+                            <li><strong>バッテリー（ANC OFF）:</strong> 11時間（単体）/ 52時間（ケース込み）</li>
+                            <li><strong>バッテリー（ANC ON）:</strong> 7.5時間（単体）/ 35時間（ケース込み）</li>
+                            <li><strong>防水規格:</strong> IPX5</li>
+                            <li><strong>重量:</strong> 5.2g（片側）</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card">
+                        <h4>Sennheiser BTD 700</h4>
+                        <ul class="spec-list">
+                            <li><strong>Bluetooth:</strong> 5.4 Class 1対応</li>
+                            <li><strong>対応コーデック:</strong> aptX Lossless / aptX Adaptive / aptX Lite(QMAP) / LC3 / SBC</li>
+                            <li><strong>低遅延対応:</strong> aptX Adaptive低遅延モード、LC3 TMAP/GMAP、aptX Lite(QMAP)</li>
+                            <li><strong>対応OS:</strong> Windows 10以降、macOS、Android 13以降、iOS（USB-C対応）</li>
+                            <li><strong>重量:</strong> 約2.2g（ドングル）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    スペック表画像: 両製品の詳細仕様比較表
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚡ 遅延性能テスト：ゲーミングヘッドセットに匹敵する結果</h2>
+                
+                <div class="highlight-box">
+                    <strong>🏆 測定結果のハイライト:</strong><br>
+                    LE AudioのGamingモードを使用した場合、<strong>12-14msの超低遅延</strong>を実現！<br>
+                    これはゲーミングヘッドセットと遜色ない性能です。
+                </div>
+
+                <div class="image-placeholder">
+                    遅延測定グラフ: 各デバイスの遅延比較グラフ
+                </div>
+
+                <h3>📊 詳細測定結果</h3>
+                <p style="margin-bottom: 1rem; color: #666;">
+                    <em>※ 測定にはSuperpowered Web Browser Audio Latency Test Widgetを使用。システム固有遅延（136ms）を除いた実測値</em>
+                </p>
+
+                <table class="performance-table">
+                    <thead>
+                        <tr>
+                            <th>デバイス</th>
+                            <th>接続方式</th>
+                            <th>遅延（ms）</th>
+                            <th>評価</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>SONY INZONE H5</td>
+                            <td>2.4GHz独自</td>
+                            <td><strong>11</strong></td>
+                            <td><span class="rating-badge rating-excellent">優秀</span></td>
+                        </tr>
+                        <tr class="best">
+                            <td>EarFun Air Pro 4</td>
+                            <td>BTD 700 aptX Lite Gaming</td>
+                            <td><strong>12</strong></td>
+                            <td><span class="rating-badge rating-excellent">優秀</span></td>
+                        </tr>
+                        <tr class="best">
+                            <td>EarFun Air Pro 4</td>
+                            <td>BTD 700 LC3 Gaming</td>
+                            <td><strong>14</strong></td>
+                            <td><span class="rating-badge rating-excellent">優秀</span></td>
+                        </tr>
+                        <tr class="good">
+                            <td>Razer BlackShark V2 Pro</td>
+                            <td>2.4GHz独自</td>
+                            <td>21</td>
+                            <td><span class="rating-badge rating-good">良好</span></td>
+                        </tr>
+                        <tr>
+                            <td>EarFun Air Pro 4</td>
+                            <td>BTD 700 aptX Adaptive Gaming</td>
+                            <td>79</td>
+                            <td><span class="rating-badge rating-fair">普通</span></td>
+                        </tr>
+                        <tr>
+                            <td>EarFun Air Pro 4</td>
+                            <td>BTD 700 LC3 Standard</td>
+                            <td>97</td>
+                            <td><span class="rating-badge rating-fair">普通</span></td>
+                        </tr>
+                        <tr>
+                            <td>EarFun Air Pro 4（ゲームモード）</td>
+                            <td>Bluetooth aptX</td>
+                            <td>121</td>
+                            <td><span class="rating-badge rating-poor">遅延あり</span></td>
+                        </tr>
+                        <tr>
+                            <td>Apple AirPods Pro 2</td>
+                            <td>Bluetooth AAC</td>
+                            <td>184</td>
+                            <td><span class="rating-badge rating-poor">遅延大</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="image-placeholder">
+                    比較画像: ゲーミングヘッドセットとの遅延比較チャート
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎵 音質評価：イコライザーが秀逸</h2>
+                
+                <div class="info-box">
+                    比較対象のRazer BlackShark V2 Pro（2023）、SONY INZONE H5、JBL Quantum TWS、Apple AirPods Pro 2の中で<strong>最も良好な音質</strong>を実現しています。
+                </div>
+
+                <div class="image-placeholder">
+                    音質評価チャート: 周波数特性グラフと音質比較
+                </div>
+
+                <h3>🎯 音質の特筆すべき点</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 10px; border-left: 4px solid #9c27b0;">
+                        <strong>適応イコライザーの精度が非常に高い</strong><br>
+                        個人の聴力特性を反映するモードの完成度が高く、自然で心地よい音質を実現
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 10px; border-left: 4px solid #2196f3;">
+                        <strong>10mm径ダイナミックドライバー</strong><br>
+                        豊かな低音と明瞭な高音のバランスが良好
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 10px; border-left: 4px solid #4caf50;">
+                        <strong>ハイレゾ認証済み</strong><br>
+                        高音質コーデック使用時の音質向上を実感
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>👂 装着感とバッテリー性能</h2>
+                
+                <div class="image-placeholder">
+                    装着画像: 実際の装着状態と快適性の説明
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>👍 装着感</h4>
+                        <p>Apple AirPods Pro 2とほぼ同等の軽やかな装着感を実現。うどん型特有の軽さで長時間使用でも疲れにくい設計です。</p>
+                        <div style="margin-top: 1rem; padding: 1rem; background: #fff3e0; border-radius: 8px;">
+                            <strong>💡 おすすめ:</strong> 付属のイヤーピースよりもAZLA SednaEarFit MAX for TWSなど、サードパーティ製への交換を推奨
+                        </div>
+                    </div>
+
+                    <div class="spec-card">
+                        <h4>🔋 バッテリー持ち</h4>
+                        <p>低遅延モード＋外音取り込み有効でも<strong>6時間の連続使用</strong>が可能。ワイヤレスイヤホンとしては十分な持続時間です。</p>
+                        <ul style="margin-top: 1rem; list-style: none;">
+                            <li>✅ 通常使用: 11時間（単体）</li>
+                            <li>✅ ANC使用: 7.5時間（単体）</li>
+                            <li>✅ ゲーミング用途: 6時間（低遅延+外音取り込み）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🔊 ANC・外音取り込み機能</h2>
+                
+                <div class="image-placeholder">
+                    ANC効果比較: ノイズキャンセリング効果の可視化
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ 外音取り込み</h4>
+                        <p>Apple AirPods Pro 2には及ばないものの、サイドトーン（自分の声の聞き取り）用途としては十分な性能。</p>
+                        <div style="margin-top: 1rem; font-weight: bold; color: #2e7d32;">
+                            おすすめ設定: 「バランス」モード<br>
+                            <small style="font-weight: normal; color: #666;">(デフォルトは外音が強調されすぎる傾向)</small>
+                        </div>
+                    </div>
+
+                    <div class="cons">
+                        <h4>🔇 ノイズキャンセリング</h4>
+                        <p>家庭内使用では十分な性能。圧迫感の少ない自然なANC効果を実現。</p>
+                        <div style="margin-top: 1rem; font-weight: bold; color: #f57c00;">
+                            おすすめ設定: 「バランス」モード<br>
+                            <small style="font-weight: normal; color: #666;">(デフォルトは圧迫感が強すぎる場合あり)</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚠️ 課題と注意点</h2>
+                
+                <div class="image-placeholder">
+                    注意喚起アイコン: 使用上の注意点まとめ
+                </div>
+
+                <div class="alert-box">
+                    <h4>🚨 重要な制限事項</h4>
+                    <p>高い低遅延性能を実現する一方で、いくつかの課題があります。購入前に必ずご確認ください。</p>
+                </div>
+
+                <h3>🔄 安定性の問題</h3>
+                <div style="background: #ffebee; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
+                    <h4 style="color: #d32f2f; margin-bottom: 1rem;">LE Audio Gaming モードの不安定性</h4>
+                    <ul style="color: #666;">
+                        <li>数時間安定することもあれば、10分程度で不安定になることも</li>
+                        <li>不安定時は左右同期のズレや音質劣化が発生</li>
+                        <li>再接続時にコーデック選択ができなくなる場合がある</li>
+                        <li>LE Audioを一度失うと再ペアリングが必要</li>
+                    </ul>
+                </div>
+
+                <h3>🎯 音響面の課題</h3>
+                <div style="background: #fff3e0; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
+                    <h4 style="color: #f57c00; margin-bottom: 1rem;">定位の不安定性</h4>
+                    <p style="color: #666;">LE Audio Gamingモード使用時、左右同期のふらつきにより定位感が不安定になることがあります。<strong>FPS系ゲームでは注意が必要</strong>です。</p>
+                    
+                    <h4 style="color: #f57c00; margin: 1.5rem 0 1rem 0;">無音時ノイズ</h4>
+                    <p style="color: #666;">LE Audio Gamingモード使用時に若干のノイズが発生。Standard モードでは発生しないため、ファームウェア改善の余地があります。</p>
+                </div>
+
+                <h3>🎤 マイク性能</h3>
+                <div style="background: #fce4ec; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
+                    <p style="color: #666;">マイク機能は搭載されているものの、<strong>音質が実用レベルに達していません</strong>。LE Audio（TMAP）使用時は音質低下が最小限に抑えられることは確認できましたが、実用性は低いと言えます。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⚙️ 使用上の推奨設定</h2>
+                
+                <div class="image-placeholder">
+                    設定画面: 推奨設定の画面キャプチャ
+                </div>
+
+                <div class="info-box">
+                    <h4>💻 Windows使用時の推奨設定</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>タッチ操作:</strong> 全て無効（誤動作防止）</li>
+                        <li><strong>装着検出:</strong> 無効</li>
+                        <li><strong>ANC/外音取り込み:</strong> バランスモード</li>
+                        <li><strong>イヤホン側ゲームモード:</strong> OFF（BTD 700使用時は不要）</li>
+                    </ul>
+                </div>
+
+                <h3>🎮 コーデック選択の指針</h3>
+                <table class="performance-table">
+                    <thead>
+                        <tr>
+                            <th>用途</th>
+                            <th>推奨コーデック</th>
+                            <th>遅延</th>
+                            <th>安定性</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>競技FPS</td>
+                            <td>aptX Lite Gaming</td>
+                            <td>12ms</td>
+                            <td>⚠️ 不安定</td>
+                        </tr>
+                        <tr class="good">
+                            <td>一般的なゲーム</td>
+                            <td>LC3 Standard</td>
+                            <td>97ms</td>
+                            <td>✅ 安定</td>
+                        </tr>
+                        <tr class="good">
+                            <td>音楽・動画</td>
+                            <td>aptX Adaptive</td>
+                            <td>79ms</td>
+                            <td>✅ 安定</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>📊 総合評価とおすすめ用途</h2>
+                
+                <div class="image-placeholder">
+                    評価レーダーチャート: 音質、遅延、装着感、バッテリーなどの総合評価
+                </div>
+
+                <h3>🎯 ユーザー別おすすめ度</h3>
+                <div class="evaluation-grid">
+                    <div class="evaluation-card recommend">
+                        <h4>✅ おすすめする人</h4>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>ワイヤレスイヤホンでゲームを楽しみたい方</li>
+                            <li>音質も重視したいゲーマー</li>
+                            <li>複数デバイス間での使い回しを考えている方</li>
+                            <li>新しい技術に挑戦したい方</li>
+                        </ul>
+                    </div>
+
+                    <div class="evaluation-card caution">
+                        <h4>⚠️ 注意が必要な人</h4>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>安定性を最重視する競技ゲーマー</li>
+                            <li>マイク機能を重視する方</li>
+                            <li>完璧な定位感を求めるFPSプレイヤー</li>
+                            <li>設定変更が苦手な方</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>⭐ 項目別評価</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 15px;">
+                        <h4 style="color: #2e7d32;">音質</h4>
+                        <div style="font-size: 2rem; color: #4caf50;">★★★★★</div>
+                        <p style="font-size: 0.9rem; color: #666;">優秀なイコライザー</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 15px;">
+                        <h4 style="color: #2e7d32;">遅延性能</h4>
+                        <div style="font-size: 2rem; color: #4caf50;">★★★★★</div>
+                        <p style="font-size: 0.9rem; color: #666;">ゲーミング級の低遅延</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%); border-radius: 15px;">
+                        <h4 style="color: #f57c00;">安定性</h4>
+                        <div style="font-size: 2rem; color: #ff9800;">★★☆☆☆</div>
+                        <p style="font-size: 0.9rem; color: #666;">改善の余地あり</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 15px;">
+                        <h4 style="color: #2e7d32;">装着感</h4>
+                        <div style="font-size: 2rem; color: #4caf50;">★★★★☆</div>
+                        <p style="font-size: 0.9rem; color: #666;">軽快で快適</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 15px;">
+                        <h4 style="color: #2e7d32;">バッテリー</h4>
+                        <div style="font-size: 2rem; color: #4caf50;">★★★★☆</div>
+                        <p style="font-size: 0.9rem; color: #666;">十分な持続時間</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-radius: 15px;">
+                        <h4 style="color: #d32f2f;">マイク</h4>
+                        <div style="font-size: 2rem; color: #f44336;">★☆☆☆☆</div>
+                        <p style="font-size: 0.9rem; color: #666;">実用性に欠ける</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>🟢 主な利点</h4>
+                        <ul>
+                            <li>ゲーミングヘッドセット級の低遅延性能（12-14ms）</li>
+                            <li>優秀な音質と適応イコライザー</li>
+                            <li>軽快な装着感と十分なバッテリー持ち</li>
+                            <li>多彩なコーデック対応</li>
+                            <li>ハイレゾ音源対応</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4>🟡 主な課題</h4>
+                        <ul>
+                            <li>LE Audio Gamingモードの安定性</li>
+                            <li>定位感の不安定性</li>
+                            <li>マイク性能の限界</li>
+                            <li>設定の複雑さ</li>
+                            <li>再接続時の不具合</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🏁 まとめ</h2>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 20px; padding: 2rem; margin: 2rem 0; border-left: 5px solid #2196f3;">
+                    <h3 style="color: #1976d2; margin-bottom: 1rem;">🎯 総合判定</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                        EarFun Air Pro 4とSennheiser BTD 700の組み合わせは、ワイヤレスイヤホンでありながら<strong>ゲーミングヘッドセットに匹敵する12-14msの超低遅延</strong>を実現する画期的な組み合わせです。
+                    </p>
+                </div>
+
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem; margin: 2rem 0;">
+                    <h4 style="color: #495057; margin-bottom: 1.5rem;">🔮 将来性について</h4>
+                    <p style="color: #666; line-height: 1.7;">
+                        現時点では完璧とは言えませんが、ワイヤレスイヤホンでのゲーミング用途において<strong>大きな可能性を示す組み合わせ</strong>と言えるでしょう。今後のファームウェアアップデートによる改善にも期待が持てます。
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; border-radius: 25px; font-weight: bold; font-size: 1.1rem;">
+                        💡 革新的な低遅延技術への挑戦的な一歩
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    購入リンク: Amazon等での商品リンクバナー
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem;">
+                <h4 style="color: #fff; margin-bottom: 1rem;">📝 テスト環境</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: left;">
+                    <div>
+                        <strong>測定ツール:</strong><br>
+                        Superpowered Web Browser Audio Latency Test Widget
+                    </div>
+                    <div>
+                        <strong>比較対象:</strong><br>
+                        Razer BlackShark V2 Pro(2023)、SONY INZONE H5、JBL Quantum TWS、Apple AirPods Pro 2
+                    </div>
+                    <div>
+                        <strong>測定環境:</strong><br>
+                        Windows PC、Virtual Cable使用
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                © 2025 オーディオ機器レビュー. このレビューは実際の使用体験に基づいています。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+                
