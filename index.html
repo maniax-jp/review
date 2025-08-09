@@ -3,17 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>レビュー記事タイトル</title>
+  <title>Maniax レビュー</title>
+  <meta name="description" content="テクノロジー製品のレビューサイト">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      padding: 3rem 2rem;
+    }
+
+    .review-grid {
+      display: grid;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .review-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .review-card h2 {
+      color: #2a5298;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .review-card h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    .review-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .review-meta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .rating-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: white;
+      background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+    }
+
+    .date-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: #666;
+      background: #e9ecef;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: white;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #263238 0%, #37474f 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        border-radius: 15px;
+      }
+
+      .header {
+        padding: 2rem 1rem;
+      }
+
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      .content {
+        padding: 2rem 1rem;
+      }
+
+      .review-card {
+        padding: 1.5rem;
+      }
+
+      .review-card h2 {
+        font-size: 1.3rem;
+      }
+
+      .review-meta {
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 0.5rem;
+      }
+      
+      .header {
+        padding: 1.5rem 1rem;
+      }
+      
+      .header h1 {
+        font-size: 1.6rem;
+      }
+      
+      .content {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <article>
-    <h1>商品名・タイトル</h1>
-    <p>投稿日: 2025-08-09</p>
-    <h2>総評</h2>
-    <p>ここに短い総評を。</p>
-    <h2>詳細レビュー</h2>
-    <p>良い点…</p>
-    <p>気になる点…</p>
-  </article>
+  <div class="container">
+    <header class="header">
+      <h1>Maniax レビュー</h1>
+      <div class="subtitle">テクノロジー製品レビューサイト</div>
+    </header>
+
+    <main class="content">
+      <div class="review-grid">
+        <a href="earfun_air_pro_4_review.html" class="review-card">
+          <h2>🎧 EarFun Air Pro 4 × Sennheiser BTD 700 レビュー</h2>
+          <p>
+            ワイヤレスイヤホンでありながらゲーミングヘッドセットに匹敵する12-14msの低遅延を実現。
+            EarFun Air Pro 4とSennheiser BTD 700の組み合わせを徹底検証した実機レビューをお届けします。
+          </p>
+          <div class="review-meta">
+            <span class="rating-badge">⭐ 4.2/5</span>
+            <span class="category-badge">🎮 ゲーミング</span>
+            <span class="date-badge">📅 2025-08-09</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Maniax. レビューは実際の使用体験に基づいています。</p>
+    </footer>
+  </div>
 </body>
 </html>
