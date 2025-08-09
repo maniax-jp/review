@@ -626,29 +626,49 @@
             display: inline-block;
             margin-right: 0.3rem;
         }
+
+        /* アクセシビリティ用のスキップリンク */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     <div class="container">
         <header class="header">
             <h1>EarFun Air Pro 4 × Sennheiser BTD 700 レビュー</h1>
             <div class="subtitle">低遅延ゲーミングの検証レポート</div>
         </header>
 
-        <div class="content">
+        <main class="content" role="main" id="main-content">
             <div style="text-align: center; margin: 2rem;">
-                <img src="image/earfun_air_pro_4_review/IMG_7312_no_exif.jpg" alt="EarFun Air Pro 4とSennheiser BTD 700を並べた写真" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                <img src="image/earfun_air_pro_4_review/IMG_7312_no_exif.jpg" alt="EarFun Air Pro 4ワイヤレスイヤホン（黒色、ケース付き）とSennheiser BTD 700 Bluetoothドングル（USB-C接続）を並べて配置した製品写真" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
                 <p style="margin-top: 1rem; color: #666; font-style: italic;">EarFun Air Pro 4とSennheiser BTD 700の組み合わせ</p>
             </div>
 
-            <section class="section">
+            <section class="section" aria-labelledby="introduction">
+                <h2 class="sr-only" id="introduction">はじめに</h2>
                 <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
                     ワイヤレスイヤホンでのゲーミング用途において、遅延は最大の課題の一つです。今回は、EarFun Air Pro 4とSennheiser BTD 700の組み合わせを用意し、ゲーミングヘッドセットに匹敵する低遅延性能が実現できるかを検証しました。
                 </p>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">🎧</span>製品概要</h2>
+            <section class="section" aria-labelledby="product-overview">
+                <h2 id="product-overview"><span class="section-icon" aria-hidden="true">🎧</span>製品概要</h2>
                 
                 <div class="specs-grid">
                     <div class="spec-card">
@@ -686,8 +706,8 @@
 
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">⚡</span>遅延性能テスト結果</h2>
+            <section class="section" aria-labelledby="latency-test">
+                <h2 id="latency-test"><span class="section-icon" aria-hidden="true">⚡</span>遅延性能テスト結果</h2>
                 
                 <div class="highlight-box">
                     <strong><span class="highlight-icon" aria-hidden="true">🏆</span>測定結果のハイライト:</strong><br>
@@ -701,7 +721,7 @@
                     <em>※ 測定にはSuperpowered Web Browser Audio Latency Test Widgetを使用。システム固有遅延（136ms）を除いた実測値</em>
                 </p>
 
-                <table class="performance-table">
+                <table class="performance-table" role="table" aria-label="遅延性能測定結果の比較表">
                     <thead>
                         <tr>
                             <th>デバイス</th>
@@ -764,8 +784,8 @@
 
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">🎵</span>音質評価</h2>
+            <section class="section" aria-labelledby="sound-quality">
+                <h2 id="sound-quality"><span class="section-icon" aria-hidden="true">🎵</span>音質評価</h2>
                 
                 <div class="info-box">
                     比較対象のRazer BlackShark V2 Pro（2023）、SONY INZONE H5、JBL Quantum TWS、Apple AirPods Pro 2の中で<strong>最も良好な音質</strong>を実現しています。
@@ -781,8 +801,8 @@
                 </ul>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">👂</span>装着感とバッテリー性能</h2>
+            <section class="section" aria-labelledby="comfort-battery">
+                <h2 id="comfort-battery"><span class="section-icon" aria-hidden="true">👂</span>装着感とバッテリー性能</h2>
                 
 
                 <div class="specs-grid">
@@ -806,8 +826,8 @@
                 </div>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">🔊</span>ANC・外音取り込み機能</h2>
+            <section class="section" aria-labelledby="anc-features">
+                <h2 id="anc-features"><span class="section-icon" aria-hidden="true">🔊</span>ANC・外音取り込み機能</h2>
                 
 
                 <div class="pros-cons">
@@ -831,8 +851,8 @@
                 </div>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">⚠️</span>課題と注意点</h2>
+            <section class="section" aria-labelledby="issues-limitations">
+                <h2 id="issues-limitations"><span class="section-icon" aria-hidden="true">⚠️</span>課題と注意点</h2>
                 
 
                 <div class="alert-box">
@@ -875,8 +895,8 @@
                 </div>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">⚙️</span>使用上の推奨設定</h2>
+            <section class="section" aria-labelledby="recommended-settings">
+                <h2 id="recommended-settings"><span class="section-icon" aria-hidden="true">⚙️</span>使用上の推奨設定</h2>
                 
                 <div class="info-box">
                     <h4><span class="highlight-icon" aria-hidden="true">🔌</span> Sennheiser BTD 700をWindowsで使用する際の推奨設定</h4>
@@ -900,7 +920,7 @@
                 </div>
 
                 <h3><span class="highlight-icon" aria-hidden="true">🎮</span>コーデック選択の指針</h3>
-                <table class="performance-table">
+                <table class="performance-table" role="table" aria-label="用途別推奨コーデック選択の指針表">
                     <thead>
                         <tr>
                             <th>用途</th>
@@ -932,8 +952,8 @@
                 </table>
             </section>
 
-            <section class="section">
-                <h2><span class="section-icon" aria-hidden="true">📊</span>総合評価とおすすめ用途</h2>
+            <section class="section" aria-labelledby="overall-evaluation">
+                <h2 id="overall-evaluation"><span class="section-icon" aria-hidden="true">📊</span>総合評価とおすすめ用途</h2>
                 
 
                 <h3><span class="highlight-icon" aria-hidden="true">🎯</span>ユーザー別おすすめ度</h3>
@@ -1041,7 +1061,7 @@
                 </div>
 
             </section>
-        </div>
+        </main>
 
         <footer class="footer">
             <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem;">
