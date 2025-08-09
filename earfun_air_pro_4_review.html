@@ -327,6 +327,39 @@
             font-size: 0.9rem;
         }
 
+        /* Large desktops and above */
+        @media (max-width: 1200px) {
+            .container {
+                margin: 1.5rem;
+            }
+        }
+
+        /* Tablets and small desktops */
+        @media (max-width: 992px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .evaluation-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .performance-table {
+                font-size: 0.95rem;
+            }
+            
+            .header h1 {
+                font-size: clamp(1.8rem, 4vw, 2.2rem);
+            }
+            
+            .section h2 {
+                font-size: clamp(1.4rem, 3vw, 1.8rem);
+            }
+        }
+
+        /* Tablets */
         @media (max-width: 768px) {
             .container {
                 margin: 1rem;
@@ -338,7 +371,7 @@
             }
 
             .header h1 {
-                font-size: 1.8rem;
+                font-size: clamp(1.6rem, 5vw, 1.8rem);
             }
 
             .section {
@@ -357,6 +390,59 @@
             .performance-table th,
             .performance-table td {
                 padding: 0.7rem;
+            }
+            
+            .rating-badge {
+                padding: 0.3rem 0.7rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            .container {
+                margin: 0.5rem;
+            }
+            
+            .header {
+                padding: 1.5rem 1rem;
+            }
+            
+            .header h1 {
+                font-size: clamp(1.4rem, 6vw, 1.6rem);
+            }
+            
+            .section {
+                padding: 1.5rem 1rem;
+            }
+            
+            .section h2 {
+                font-size: clamp(1.2rem, 4vw, 1.4rem);
+                margin-bottom: 1rem;
+            }
+            
+            .performance-table {
+                font-size: 0.8rem;
+            }
+            
+            .performance-table th,
+            .performance-table td {
+                padding: 0.5rem 0.3rem;
+            }
+            
+            .rating-badge {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+                margin: 0.25rem;
+            }
+            
+            .spec-card, .evaluation-card {
+                padding: 1.5rem;
+            }
+            
+            .highlight-box, .alert-box, .info-box {
+                padding: 1.25rem;
+                margin: 1.5rem 0;
             }
         }
 
@@ -385,6 +471,18 @@
         .rating-poor {
             background: linear-gradient(135deg, #f44336 0%, #ef5350 100%);
         }
+
+        /* 絵文字統一用のクラス */
+        .section-icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-size: 1.2em;
+        }
+
+        .highlight-icon {
+            display: inline-block;
+            margin-right: 0.3rem;
+        }
     </style>
 </head>
 <body>
@@ -407,7 +505,7 @@
             </section>
 
             <section class="section">
-                <h2>🎧 製品概要</h2>
+                <h2><span class="section-icon" aria-hidden="true">🎧</span>製品概要</h2>
                 
                 <div class="specs-grid">
                     <div class="spec-card">
@@ -436,7 +534,7 @@
                 </div>
 
                 <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem; margin: 2rem 0;">
-                    <h4 style="color: #495057; margin-bottom: 1.5rem;">📝 スペックに記載のない事項について</h4>
+                    <h4 style="color: #495057; margin-bottom: 1.5rem;"><span class="highlight-icon" aria-hidden="true">📝</span>スペックに記載のない事項について</h4>
                     <p style="color: #666; line-height: 1.7;">
                         対応コーデックに記載がありませんが、両製品ともLE Audio、TMAP、GMAP、LC3、aptX Lite(QMAP)に対応しています。<br>
                         aptX Lite(QMAP)はQualcommの独自コーデックおよび独自プロトコルです。
@@ -446,16 +544,16 @@
             </section>
 
             <section class="section">
-                <h2>⚡ 遅延性能テスト結果</h2>
+                <h2><span class="section-icon" aria-hidden="true">⚡</span>遅延性能テスト結果</h2>
                 
                 <div class="highlight-box">
-                    <strong>🏆 測定結果のハイライト:</strong><br>
+                    <strong><span class="highlight-icon" aria-hidden="true">🏆</span>測定結果のハイライト:</strong><br>
                     LE AudioのGamingモードを使用した場合、<strong>12-14msの低遅延</strong>を実現。<br>
                     ゲーミングヘッドセットと同等レベルの性能を確認しました。
                 </div>
 
 
-                <h3>📊 詳細測定結果</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">📊</span>詳細測定結果</h3>
                 <p style="margin-bottom: 1rem; color: #666;">
                     <em>※ 測定にはSuperpowered Web Browser Audio Latency Test Widgetを使用。システム固有遅延（136ms）を除いた実測値</em>
                 </p>
@@ -524,14 +622,14 @@
             </section>
 
             <section class="section">
-                <h2>🎵 音質評価</h2>
+                <h2><span class="section-icon" aria-hidden="true">🎵</span>音質評価</h2>
                 
                 <div class="info-box">
                     比較対象のRazer BlackShark V2 Pro（2023）、SONY INZONE H5、JBL Quantum TWS、Apple AirPods Pro 2の中で<strong>最も良好な音質</strong>を実現しています。
                 </div>
 
 
-                <h3>🎯 音質の特筆すべき点</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🎯</span>音質の特筆すべき点</h3>
                 <ul style="list-style: none; padding-left: 0;">
                     <li style="padding: 0.8rem; margin: 0.5rem 0; background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 10px; border-left: 4px solid #9c27b0;">
                         <strong>適応イコライザーの精度が高い</strong><br>
@@ -541,20 +639,20 @@
             </section>
 
             <section class="section">
-                <h2>👂 装着感とバッテリー性能</h2>
+                <h2><span class="section-icon" aria-hidden="true">👂</span>装着感とバッテリー性能</h2>
                 
 
                 <div class="specs-grid">
                     <div class="spec-card">
-                        <h4>👍 装着感</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">👍</span>装着感</h4>
                         <p>Apple AirPods Pro 2とほぼ同等の軽やかな装着感を実現。うどん型特有の軽さで長時間使用でも疲れにくい設計です。</p>
                         <div style="margin-top: 1rem; padding: 1rem; background: #fff3e0; border-radius: 8px;">
-                            <strong>💡 おすすめ:</strong> 付属のイヤーピースよりもAZLA SednaEarFit MAX for TWSなど、サードパーティ製への交換を推奨
+                            <strong><span class="highlight-icon" aria-hidden="true">💡</span>おすすめ:</strong> 付属のイヤーピースよりもAZLA SednaEarFit MAX for TWSなど、サードパーティ製への交換を推奨
                         </div>
                     </div>
 
                     <div class="spec-card">
-                        <h4>🔋 バッテリー持ち</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">🔋</span>バッテリー持ち</h4>
                         <p>低遅延モード＋外音取り込み有効でも実測で<strong>6時間の連続使用</strong>が可能。ワイヤレスイヤホンとしては十分な持続時間です。</p>
                         <ul style="margin-top: 1rem; list-style: none;">
                             <li>✅ 通常使用: 11時間（単体）</li>
@@ -566,12 +664,12 @@
             </section>
 
             <section class="section">
-                <h2>🔊 ANC・外音取り込み機能</h2>
+                <h2><span class="section-icon" aria-hidden="true">🔊</span>ANC・外音取り込み機能</h2>
                 
 
                 <div class="pros-cons">
                     <div class="pros">
-                        <h4>✅ 外音取り込み</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">✅</span>外音取り込み</h4>
                         <p>Apple AirPods Pro 2には及ばないものの、サイドトーン（自分の声の聞き取り）用途としては十分な性能。</p>
                         <div style="margin-top: 1rem; font-weight: bold; color: #2e7d32;">
                             おすすめ設定: 「バランス」モード<br>
@@ -580,7 +678,7 @@
                     </div>
 
                     <div class="cons">
-                        <h4>🔇 ノイズキャンセリング</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">🔇</span>ノイズキャンセリング</h4>
                         <p>家庭内使用では十分な性能。圧迫感の少ない自然なANC効果を実現。</p>
                         <div style="margin-top: 1rem; font-weight: bold; color: #f57c00;">
                             おすすめ設定: 「バランス」モード<br>
@@ -591,15 +689,15 @@
             </section>
 
             <section class="section">
-                <h2>⚠️ 課題と注意点</h2>
+                <h2><span class="section-icon" aria-hidden="true">⚠️</span>課題と注意点</h2>
                 
 
                 <div class="alert-box">
-                    <h4>🚨 重要な制限事項</h4>
+                    <h4><span class="highlight-icon" aria-hidden="true">🚨</span>重要な制限事項</h4>
                     <p>高い低遅延性能を実現する一方で、いくつかの課題があります。購入前に必ずご確認ください。</p>
                 </div>
 
-                <h3>🔄 安定性の問題</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🔄</span>安定性の問題</h3>
                 <div style="background: #ffebee; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
                     <h4 style="color: #d32f2f; margin-bottom: 1rem;">LE Audio Gaming モードの不安定性</h4>
                     <ul style="color: #666; padding-left: 3rem;">
@@ -619,7 +717,7 @@
                     </p>
                 </div>
 
-                <h3>🎯 音響面の課題</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🎯</span>音響面の課題</h3>
                 <div style="background: #fff3e0; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
                     <h4 style="color: #f57c00; margin-bottom: 1rem;">定位の不安定性</h4>
                     <p style="color: #666;">LE Audio Gamingモード使用時、左右同期のふらつきにより定位感が不安定になることがあります。<strong>FPS系ゲームでは注意が必要</strong>です。</p>
@@ -628,17 +726,17 @@
                     <p style="color: #666;">LE Audio Gamingモード使用時に若干のノイズが発生。Standard モードでは発生しないため、ファームウェア改善の余地があります。</p>
                 </div>
 
-                <h3>🎤 マイク性能</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🎤</span>マイク性能</h3>
                 <div style="background: #fce4ec; border-radius: 10px; padding: 1.5rem; margin: 1rem 0;">
                     <p style="color: #666;">マイク機能は搭載されているものの、<strong>音量・音質ともに実用レベルに達していません</strong>。LE Audio（TMAP）使用時はBluetooth Classic（HSP）に比べてイヤフォンで聞く側の音質低下が最小限に抑えられることは確認できましたが、実用性は低いと言えます。</p>
                 </div>
             </section>
 
             <section class="section">
-                <h2>⚙️ 使用上の推奨設定</h2>
+                <h2><span class="section-icon" aria-hidden="true">⚙️</span>使用上の推奨設定</h2>
                 
                 <div class="info-box">
-                    <h4>🔌 Sennheiser BTD 700をWindowsで使用する際の推奨設定</h4>
+                    <h4><span class="highlight-icon" aria-hidden="true">🔌</span> Sennheiser BTD 700をWindowsで使用する際の推奨設定</h4>
                     <ul style="margin-top: 1rem; padding-left: 3rem;">
                         <li>Sennheiser Dongle Controlアプリを使用してaptX Lite(QMAP)に設定します</li>
                     </ul>
@@ -649,7 +747,7 @@
                 </div>
 
                 <div class="info-box">
-                    <h4>🎧 EarFun Air Pro 4をWindowsで使用する際の推奨設定</h4>
+                    <h4><span class="highlight-icon" aria-hidden="true">🎧</span> EarFun Air Pro 4をWindowsで使用する際の推奨設定</h4>
                     <ul style="margin-top: 1rem; padding-left: 3rem;">
                         <li><strong>タッチ操作:</strong> 必要最低限の設定（誤動作防止）</li>
                         <li><strong>装着検出:</strong> 無効</li>
@@ -658,7 +756,7 @@
                     </ul>
                 </div>
 
-                <h3>🎮 コーデック選択の指針</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🎮</span>コーデック選択の指針</h3>
                 <table class="performance-table">
                     <thead>
                         <tr>
@@ -692,13 +790,13 @@
             </section>
 
             <section class="section">
-                <h2>📊 総合評価とおすすめ用途</h2>
+                <h2><span class="section-icon" aria-hidden="true">📊</span>総合評価とおすすめ用途</h2>
                 
 
-                <h3>🎯 ユーザー別おすすめ度</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">🎯</span>ユーザー別おすすめ度</h3>
                 <div class="evaluation-grid">
                     <div class="evaluation-card recommend">
-                        <h4>✅ おすすめする人</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">✅</span>おすすめする人</h4>
                         <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
                             <li>ワイヤレスイヤホンでゲームを楽しみたい方</li>
                             <li>マイクは別で用意できる方</li>
@@ -708,7 +806,7 @@
                     </div>
 
                     <div class="evaluation-card caution">
-                        <h4>⚠️ 注意が必要な人</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">⚠️</span>注意が必要な人</h4>
                         <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
                             <li>安定性を最重視する競技ゲーマー</li>
                             <li>マイク機能を重視する方</li>
@@ -718,7 +816,7 @@
                     </div>
                 </div>
 
-                <h3>⭐ 項目別評価</h3>
+                <h3><span class="highlight-icon" aria-hidden="true">⭐</span>項目別評価</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
                     <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border-radius: 15px;">
                         <h4 style="color: #2e7d32;">音質</h4>
@@ -754,7 +852,7 @@
 
                 <div class="pros-cons">
                     <div class="pros">
-                        <h4>🟢 主な利点</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">🟢</span>主な利点</h4>
                         <ul style="padding-left: 1rem;">
                             <li>ゲーミングヘッドセット級の低遅延性能（12-14ms）</li>
                             <li>優秀な音質と適応イコライザー</li>
@@ -764,7 +862,7 @@
                     </div>
 
                     <div class="cons">
-                        <h4>🟡 主な課題</h4>
+                        <h4><span class="highlight-icon" aria-hidden="true">🟡</span>主な課題</h4>
                         <ul style="padding-left: 1rem;">
                             <li>LE Audio Gamingモードの安定性</li>
                             <li>定位感の不安定性</li>
@@ -777,17 +875,17 @@
             </section>
 
             <section class="section">
-                <h2>🏁 まとめ</h2>
+                <h2><span class="section-icon" aria-hidden="true">🏁</span>まとめ</h2>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 20px; padding: 2rem; margin: 2rem 0; border-left: 5px solid #2196f3;">
-                    <h3 style="color: #1976d2; margin-bottom: 1rem;">🎯 総合判定</h3>
+                    <h3 style="color: #1976d2; margin-bottom: 1rem;"><span class="highlight-icon" aria-hidden="true">🎯</span>総合判定</h3>
                     <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
                         EarFun Air Pro 4とSennheiser BTD 700の組み合わせは、ワイヤレスイヤホンでありながら<strong>ゲーミングヘッドセットに匹敵する12-14msの低遅延</strong>を実現する注目すべき組み合わせです。
                     </p>
                 </div>
 
                 <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem; margin: 2rem 0;">
-                    <h4 style="color: #495057; margin-bottom: 1.5rem;">🔮 将来性について</h4>
+                    <h4 style="color: #495057; margin-bottom: 1.5rem;"><span class="highlight-icon" aria-hidden="true">🔮</span>将来性について</h4>
                     <p style="color: #666; line-height: 1.7;">
                         現時点では完璧とは言えませんが、ワイヤレスイヤホンでのゲーミング用途において<strong>興味深い可能性を示す組み合わせ</strong>と言えるでしょう。一部不安定な部分について今後のファームウェアアップデートにより改善されれば完璧な組み合わせとなるでしょう。
                     </p>
