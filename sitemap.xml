@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- メインページ -->
+  <url>
+    <loc>https://review.maniax.me/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- EarFun Air Pro 4 レビューページ -->
+  <url>
+    <loc>https://review.maniax.me/earfun_air_pro_4_review.html</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://review.maniax.me/image/earfun_air_pro_4_review/IMG_7312_no_exif.jpg</image:loc>
+      <image:title>EarFun Air Pro 4とSennheiser BTD 700の製品写真</image:title>
+      <image:caption>EarFun Air Pro 4ワイヤレスイヤホンとSennheiser BTD 700 Bluetoothアダプターの組み合わせ</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
